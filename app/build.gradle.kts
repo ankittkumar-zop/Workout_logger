@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kapt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -49,6 +49,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtime)
     implementation(libs.androidx.activity.compose)
     implementation(libs.lifecyle.runtime.compose)
+    implementation(libs.materialIcons)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.graphics)
@@ -65,5 +66,5 @@ dependencies {
     //room
     implementation(libs.room.runtime)
     implementation(libs.room)
-    kapt(libs.room.compiler)
+    ksp(libs.room.compiler)
 }
